@@ -1,15 +1,21 @@
 {
-  "name": "badgeforce-cli",
-  "version": "1.0.0",
+  "name": "bfjs",
+  "version": "0.0.0-alpha",
   "main": "index.js",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build:types": "tsc --emitDeclarationOnly",
+    "dev": "parcel ./src/index.ts",
+    "build": "parcel build ./src/index.ts",
+    "build:protos": "./scripts/build_protos.sh $(pwd)"
+  },
   "dependencies": {
     "add": "^2.0.6",
     "axios": "^0.18.0",
     "big.js": "^5.2.2",
     "bignumber.js": "^7.0.1",
-    "caporal": "^0.10.0",
     "cbor": "^4.0.0",
     "command-line-args": "^5.0.2",
     "eth-crypto": "^1.2.4",
@@ -22,7 +28,13 @@
     "request": "^2.88.0",
     "request-promise": "^4.2.2",
     "sawtooth-sdk": "^1.0.2",
-    "web3": "^0.20.6",
-    "yarn": "^1.6.0"
+    "ts-protoc-gen": "^0.7.7",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6",
+    "web3": "^0.20.6"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.10.3",
+    "tslint-config-airbnb": "^5.11.0"
   }
 }
