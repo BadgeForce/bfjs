@@ -17,6 +17,7 @@
     "big.js": "^5.2.2",
     "bignumber.js": "^7.0.1",
     "cbor": "^4.0.0",
+    "chalk": "^2.4.1",
     "command-line-args": "^5.0.2",
     "eth-crypto": "^1.2.4",
     "ethereumjs-util": "^6.0.0",
@@ -24,6 +25,8 @@
     "google-closure-library": "^20180405.0.0",
     "google-protobuf": "^3.5.0",
     "moment": "^2.22.2",
+    "node-emoji": "^1.8.1",
+    "ora": "^3.0.0",
     "prettyjson": "^1.2.1",
     "request": "^2.88.0",
     "request-promise": "^4.2.2",
@@ -31,6 +34,7 @@
     "ts-protoc-gen": "^0.7.7",
     "tslint": "^5.11.0",
     "typescript": "^3.1.6",
+    "vorpal": "^1.12.0",
     "web3": "^0.20.6"
   },
   "devDependencies": {

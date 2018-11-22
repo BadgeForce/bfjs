@@ -1,8 +1,12 @@
 // tslint:disable-next-line:max-line-length
-import { TransactionList, Transaction, TransactionHeader } from '../sawtooth-sdk-ts/transaction/transaction_pb';
-import { BatchList, BatchHeader, Batch } from '../sawtooth-sdk-ts/batch/batch_pb';
-import { Signer } from './signer';
+import { TransactionList, Transaction, TransactionHeader } from '../sawtooth-sdk-ts/transaction_pb';
+import { BatchList, BatchHeader, Batch } from '../sawtooth-sdk-ts/batch_pb';
+import { Signer } from '../signer';
+import { RPCRequest } from '../generated/templates_payload_pb';
 
+export class TransactionData {
+  constructor(public header : TransactionHeader, public request : RPCRequest) {}
+}
 export class RPCTransaction {
   transactions : TransactionList;
   batches : BatchList;
@@ -12,11 +16,11 @@ export class RPCTransaction {
     this.signer = signer;
   }
 
-    // tslint:disable-next-line:max-line-length
+  // tslint:disable-next-line:max-line-length
   transaction(transactionHeader : TransactionHeader, transactionPayload : Uint8Array) : RPCTransaction {
     const signature = this
-            .signer
-            .sign(transactionHeader.serializeBinary());
+      .signer
+      .sign(transactionHeader.serializeBinary());
 
     const transaction: Transaction = new Transaction();
     transaction.setHeader(transactionHeader.serializeBinary());
@@ -24,8 +28,8 @@ export class RPCTransaction {
     transaction.setPayload(transactionPayload);
 
     this
-            .transactions
-            .addTransactions(transaction);
+      .transactions
+      .addTransactions(transaction);
     return this;
   }
 
@@ -34,14 +38,14 @@ export class RPCTransaction {
 
     batchHeader.setSignerPublicKey(this.signer.publickeyHex);
     const transactionIDS: string[] = this
-            .transactions
-            .getTransactionsList()
-            .map(t => t.getHeaderSignature());
+      .transactions
+      .getTransactionsList()
+      .map(t => t.getHeaderSignature());
     batchHeader.setTransactionIdsList(transactionIDS);
 
     const signature: string = this
-            .signer
-            .sign(batchHeader.serializeBinary());
+      .signer
+      .sign(batchHeader.serializeBinary());
     const batch: Batch = new Batch();
     batch.addTransactions(this.transactions);
     batch.setHeader(batchHeader.serializeBinary());

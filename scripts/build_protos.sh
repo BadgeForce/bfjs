@@ -26,17 +26,13 @@ protoc  \
 git clone "${SAWTOOTH_PROTOS_URL}"
 sawtoothProtoFiles=$(ls ${SAWTOOTH_PROTOS})
 
-for filename in ${SAWTOOTH_PROTOS}/*.proto; do
-    fn="${filename##*/}"
-    out="${SAWTOOTH_OUT}/${fn%%.*}"
-    
-    mkdir "${out}"
+for filename in ${SAWTOOTH_PROTOS}/*.proto; do    
     protoc  \
         --plugin="protoc-gen-ts=${PROTOC_GEN_TS_PATH}" \
-        --js_out="import_style=commonjs,binary:${out}" \
+        --js_out="import_style=commonjs,binary:${SAWTOOTH_OUT}" \
         -I "${SAWTOOTH_PROTOS}" \
         "${filename##*/}" \
-        --ts_out="${out}"
+        --ts_out="${SAWTOOTH_OUT}"
 done
 
 rm -rf ./sawtooth-sdk-javascript

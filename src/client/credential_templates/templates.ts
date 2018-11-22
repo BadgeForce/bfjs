@@ -1,10 +1,25 @@
 import { getTemplateAddress, FAMILY_NAME, FAMILY_VERSION } from './namespace';
-import { Method, RPCRequest } from '../generated/templates_payload_pb';
-import { TransactionHeader } from '../sawtooth-sdk-ts/transaction/transaction_pb';
+import { Method, RPCRequest } from '../../generated/templates_payload_pb';
+import { TransactionHeader } from '../../sawtooth-sdk-ts/transaction_pb';
 import { createHash } from 'crypto';
+import { RestClient } from '../rest_client';
+import { TransactionData } from '../transaction_utils';
+import { Signer } from '../../signer';
+import { Config } from '../config';
 
-export class CredentialTemplateTransactions {
-  static create(name : string, owner : string, version : string, data : string, callback : Function) : void {
+export class TemplateDelParams {
+  address : string;
+  constructor(public name : string, public owner : string, public version : string) {
+    this.address = getTemplateAddress(owner, name, version);
+  }
+}
+
+export class CredentialTemplatesClient extends RestClient {
+  constructor(config : Config) {
+    super(config);
+  }
+
+  create(name : string, owner : string, version : string, data : string) : void {
     const template: Object = {
       name,
       owner,
@@ -22,10 +37,15 @@ export class CredentialTemplateTransactions {
     transactionHeader.addInputs(address);
     transactionHeader.addOutputs(address);
     transactionHeader.setPayloadSha512(createHash('sha512').update(req.serializeBinary()).digest('hex'));
-    callback(transactionHeader, req);
+    const transactionData = new TransactionData(transactionHeader, req);
+    super.submitSingleBatch(transactionData);
   }
 
-  static delete(addresses : string[], callback : Function) : void {
+  delete(...params : TemplateDelParams[]) : void {
+    this._delete(params.map(p => p.address));
+  }
+
+  _delete(addresses : string[]) : void {
     const req: RPCRequest = new RPCRequest();
     req.setMethod(Method.DELETE);
     req.setParams(JSON.stringify({ addresses }));
@@ -35,6 +55,7 @@ export class CredentialTemplateTransactions {
     transactionHeader.setInputsList(addresses);
     transactionHeader.setOutputsList(addresses);
     transactionHeader.setPayloadSha512(createHash('sha512').update(req.serializeBinary()).digest('hex'));
-    callback(transactionHeader, req);
+    const transactionData = new TransactionData(transactionHeader, req);
+    super.submitSingleBatch(transactionData);
   }
 }
