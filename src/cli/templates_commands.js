@@ -3,13 +3,18 @@ const badgeforce = require('../../dist');
 const create = function (args, callback) {
     const {name, owner, version, data} = args;
     this.log(name, owner, version, data);
-    const signer = new badgeforce.Signer("e3ddee618d8a8864481e71021e42ed46c3ab410ab1ad7cdf0ff31f6d61739275")
-    const config = new badgeforce.Config('http://127.0.0.1:8008', signer);
-    const client = new badgeforce.Client(config);
-    client
-        .credentialTemplates
-        .create("fdas", "fas", "v1", JSON.stringify({'h': 'w'}))
-    callback();
+    try {
+        const signer = new badgeforce.Signer("e3ddee618d8a8864481e71021e42ed46c3ab410ab1ad7cdf0ff31f6d61739275")
+        const config = new badgeforce.Config('http://127.0.0.1:8008', signer);
+        const client = new badgeforce.Client(config);
+        client
+            .credentialTemplates
+            .create("fdas", "fas", "v1", JSON.stringify({'h': 'w'}))
+        callback();
+    } catch (error) {
+        console.log(error)
+    }
+
 }
 
 const del = function (args, callback) {
