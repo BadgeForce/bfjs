@@ -1,5 +1,5 @@
 import { createHash } from 'crypto';
-import { AddressBuilder } from '../../common';
+import { AddressBuilder } from '../common';
 
 export const FAMILY_NAME : string = 'credential-templates';
 export const FAMILY_VERSION : string = '1.0';
