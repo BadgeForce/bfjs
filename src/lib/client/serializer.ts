@@ -1,4 +1,4 @@
-import {Earning, Settlements} from '../generated/earning_pb';
+import {Credential} from '../generated/credentials_pb';
 
 /**
  *  Wrapper class for state query responses that has deserialization utility methods
@@ -11,37 +11,21 @@ export class QueryResults {
   constructor(public data : any) {}
 
   /**
-   * Deserialize state query results into an array of earnings
+   * Deserialize state query results into an array of credentials
    *
-   * @returns {ReadonlyArray < Earning >}
+   * @returns {ReadonlyArray < Credential >}
    * @memberof QueryResults
    */
-  toEarnings() : ReadonlyArray < Earning > {
+  toCredentials() : ReadonlyArray < Credential > {
     return this
       .data
       .data
       .map(entry => {
         const bytes : Uint8Array = new Uint8Array(Buffer.from(entry.data, 'base64'));
-        return Earning.deserializeBinary(bytes);
+        return Credential.deserializeBinary(bytes);
       });
   }
-
-  /**
-   * Deserialize state query result into an array of settlements
-   *
-   * @returns {ReadonlyArray < Settlements >}
-   * @memberof QueryResults
-   */
-  toSettlements() : ReadonlyArray < Settlements > {
-    return this
-      .data
-      .data
-      .map(entry => {
-        const bytes : Uint8Array = new Uint8Array(Buffer.from(entry.data, 'base64'));
-        return Settlements.deserializeBinary(bytes);
-      });
-  }
-
+  
   /**
    * get state query data how it was passed
    *

@@ -2,7 +2,7 @@ import { getCredentialAddress, FAMILY_NAME, FAMILY_VERSION } from './namespace';
 import { Method, RPCRequest } from '../generated/credentials_payload_pb';
 import { TransactionHeader } from '../sawtooth-sdk-ts/transaction_pb';
 import { createHash } from 'crypto';
-import { TransactionData, Client } from '../client';
+import { Client, TransactionData } from '../client';
 import { Credential, Template } from '../generated/credentials_pb';
 import { Secp256k1Signer } from '../common';
 
@@ -41,7 +41,7 @@ export class CredentialTransactor {
     request.setParams(JSON.stringify({ credential_pb: Buffer.from(credential.bytes).toString('hex') }));
 
     const data = Object.freeze({
-      header: this.getHeader(credential.stateAddress, request),
+      header: this.getHeader([credential.stateAddress], request),
       request
     });
 

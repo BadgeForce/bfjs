@@ -98,7 +98,6 @@ export class RestClient {
           .config
           .signer
           .sign(data.header.serializeBinary());
-
         const transaction : Transaction = new Transaction();
         transaction.setHeader(data.header.serializeBinary());
         transaction.setHeaderSignature(signature);

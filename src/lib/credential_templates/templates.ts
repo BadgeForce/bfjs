@@ -26,16 +26,13 @@ export class TemplatesTransactor {
   constructor(public singerPublicKey: string, public transactionStore: (t: TransactionData) => Client) { }
 
   create(credentialTemplate: CredentialTemplate): Client {
-
     const request: RPCRequest = new RPCRequest();
     request.setMethod(Method.CREATE);
     request.setParams(credentialTemplate.jsonstr);
-
     const data = Object.freeze({
-      header: this.getHeader(credentialTemplate.stateAddress, request),
+      header: this.getHeader([credentialTemplate.stateAddress], request),
       request
     });
-
     return this.transactionStore(data);
   }
 
@@ -59,12 +56,12 @@ export class TemplatesTransactor {
   * @returns {TransactionHeader}
   * @memberof EarningsTransactor
   */
-  getHeader(stateAuthorization: any, request: RPCRequest): TransactionHeader {
+  getHeader(stateAuthorization: Array<string>, request: RPCRequest): TransactionHeader {
     const txHeader: TransactionHeader = new TransactionHeader();
     txHeader.setFamilyName(FAMILY_NAME);
     txHeader.setFamilyVersion(FAMILY_VERSION);
-    txHeader.setInputsList(stateAuthorization.map(a => a));
-    txHeader.setOutputsList(stateAuthorization.map(a => a));
+    txHeader.setInputsList(stateAuthorization);
+    txHeader.setOutputsList(stateAuthorization);
     txHeader.setPayloadSha512(createHash('sha512').update(request.serializeBinary()).digest('hex'));
     txHeader.setSignerPublicKey(this.singerPublicKey);
     return txHeader;
