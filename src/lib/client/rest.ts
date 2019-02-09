@@ -98,6 +98,7 @@ export class RestClient {
           .config
           .signer
           .sign(data.header.serializeBinary());
+
         const transaction : Transaction = new Transaction();
         transaction.setHeader(data.header.serializeBinary());
         transaction.setHeaderSignature(signature);
@@ -128,28 +129,6 @@ export class RestClient {
   }
 
   /**
-   * Query the chain state
-   *
-   * @param {string} address state address for the query
-   * @returns {Promise < any >}
-   * @memberof RestClient
-   */
-  async stateQuery(address : string) : Promise < any > {
-    try {
-      const response = await request
-        .get(this.endpoints.state)
-        .ok(res => res.status < 300)
-        .set(this.HEADERS.contentType, this.HEADERS.applicationJSON)
-        .query({address});
-      return new QueryResults(response.body);
-    } catch (error) {
-      throw error.response
-        ? new Error(error.response.text)
-        : error;
-    }
-  }
-
-  /**
    * Submit a list of batches to the chain
    *
    * @param {BatchList} list
@@ -167,6 +146,33 @@ export class RestClient {
         .send(Buffer.from(data));
 
       return response.body;
+    } catch (error) {
+      throw error.response
+        ? new Error(error.response.text)
+        : error;
+    }
+  }
+
+  /**
+   * Query the chain state
+   *
+   * @param {string} address state address for the query
+   * @returns {Promise < QueryResults >}
+   * @memberof RestClient
+   */
+  async stateQuery(address : string) : Promise < QueryResults > {
+    try {
+      const response = await request
+        .get(this.endpoints.state)
+        .ok(res => res.status < 300)
+        .set(this.HEADERS.contentType, this.HEADERS.applicationJSON)
+        .query({address});
+      const results = new QueryResults(response.body);
+      if(results.data.data.length == 0) {
+        throw new Error(`No data found at state address: ${address}`);
+      }
+
+      return results;
     } catch (error) {
       throw error.response
         ? new Error(error.response.text)

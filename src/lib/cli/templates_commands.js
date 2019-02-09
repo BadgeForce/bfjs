@@ -10,7 +10,7 @@ const create = function (args, callback) {
     name,
     owner,
     version,
-    data
+    description
   } = args;
   this.log(name, owner, version, data);
   try {
@@ -18,10 +18,8 @@ const create = function (args, callback) {
       "e3ddee618d8a8864481e71021e42ed46c3ab410ab1ad7cdf0ff31f6d61739275")
     const config = new badgeforce.Config(DEFAULT_ENDPOINT, signer);
     const client = new badgeforce.Client(config);
-    const template = new badgeforce.Templates.CredentialTemplate(
-      "fdas", "fas", "v1", JSON.stringify({
-        'h': 'w'
-    }));
+    const version = new badgeforce.Templates.CredentialTemplateVersion(1, 0, 0);
+    const template = new badgeforce.Templates.CredentialTemplate(signer, "Khalil Template", "Just a test lil fella.", "Test", version);
     client 
       .credentialTemplates
       .create(template)
