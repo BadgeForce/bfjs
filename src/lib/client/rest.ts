@@ -3,10 +3,7 @@ import {Batch, BatchHeader, BatchList} from '../sawtooth-sdk-ts/batch_pb';
 import {Transaction, TransactionHeader} from '../sawtooth-sdk-ts/transaction_pb';
 import {Config} from './config';
 import {QueryResults} from './serializer';
-
-interface RPCRequest {
-    serializeBinary(): Uint8Array
-}
+import { BinarySerializable } from '../common';
 
 /**
  *
@@ -42,7 +39,7 @@ export class TransactionData {
    * @param {RPCRequest} request  rpc request ready for signing and submission
    * @memberof TransactionData
    */
-  constructor(readonly header : TransactionHeader, readonly request : RPCRequest) {}
+  constructor(readonly header : TransactionHeader, readonly request : BinarySerializable) {}
 }
 
 /**

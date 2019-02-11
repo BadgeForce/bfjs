@@ -1,8 +1,8 @@
 {
     "compilerOptions": {
       "target": "es2017",
-      "outDir": "build/main",
-      "rootDir": "src",
+      "outDir": "build",
+      "rootDirs": ["src", "src/lib", "src/cli"],
       "moduleResolution": "node",
       "module": "commonjs",
       "inlineSourceMap": true,

@@ -2,10 +2,14 @@ import * as client from './lib/client';
 import * as utils from './lib/common';
 import * as credentials from './lib/verifiable_credentials';
 import * as templates from './lib/credential_templates';
+import * as verifier from './lib/verifier';
 
-import * as CredentialsPayload_pb from './lib/generated/credentials_payload_pb';
-import * as TemplatesPayload_pb from './lib/generated/templates_payload_pb';
 import * as Credentials_pb from './lib/generated/credentials_pb';
+import * as CredentialsPayload_pb from './lib/generated/credentials_payload_pb';
+
+import * as Template_pb from './lib/generated/credential-templates/template_pb';
+import * as TemplatePayload_pb from './lib/generated/credential-templates/payload_pb';
+import * as TemplatesTransactionRecpts_pb from './lib/generated/credential-templates/transaction_receipts_pb';
 
 export module badgeforcejs {
     export const Config = client.Config;
@@ -14,10 +18,11 @@ export module badgeforcejs {
     export const AddressBuilder = utils.AddressBuilder;
     export const Credentials = credentials;
     export const Templates = templates;
+    export const Verifier = verifier;
 
     export const Protos = {
         CredentialsPayload_pb,
-        TemplatesPayload_pb,
-        Credentials_pb
+        Credentials_pb, 
+        CredentialTemplates: {Template_pb, TemplatePayload_pb, TemplatesTransactionRecpts_pb}
     };
 }
