@@ -1,0 +1,7 @@
+const validation = require('./validation');
+const jsonValidation = require('./json_files');
+module.exports = {
+    clientConfigured: validation.clientConfigured,
+    validateTemplate: jsonValidation.validateTemplate
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9zcmMvY2xpL2NvbW1hbmRzL3ZhbGlkYXRpb24vaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsTUFBTSxVQUFVLEdBQUcsT0FBTyxDQUFDLGNBQWMsQ0FBQyxDQUFDO0FBQzNDLE1BQU0sY0FBYyxHQUFHLE9BQU8sQ0FBQyxjQUFjLENBQUMsQ0FBQztBQUUvQyxNQUFNLENBQUMsT0FBTyxHQUFHO0lBQ2YsZ0JBQWdCLEVBQUUsVUFBVSxDQUFDLGdCQUFnQjtJQUM3QyxnQkFBZ0IsRUFBRSxjQUFjLENBQUMsZ0JBQWdCO0NBQ2xELENBQUMifQ==

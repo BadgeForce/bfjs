@@ -11,6 +11,8 @@ import * as Template_pb from './lib/generated/credential-templates/template_pb';
 import * as TemplatePayload_pb from './lib/generated/credential-templates/payload_pb';
 import * as TemplatesTransactionRecpts_pb from './lib/generated/credential-templates/transaction_receipts_pb';
 
+import * as Reader from './lib/file_reader';
+
 export module badgeforcejs {
     export const Config = client.Config;
     export const Client = client.Client;
@@ -19,6 +21,9 @@ export module badgeforcejs {
     export const Credentials = credentials;
     export const Templates = templates;
     export const Verifier = verifier;
+
+    export const JSONValidator = Reader.Validator;
+    export const JSONFileReader = Reader.FileReader;
 
     export const Protos = {
         CredentialsPayload_pb,

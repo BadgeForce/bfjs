@@ -29,7 +29,7 @@
     "clean": "trash build test",
     "all": "run-s reset test cov:check doc:html",
     "prepare-release": "run-s all version doc:publish",
-    "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('propschain-js must be installed with Yarn: https://yarnpkg.com/')\""
+    "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('bfjs must be installed with Yarn: https://yarnpkg.com/')\""
   },
   "scripts-info": {
     "info": "Display information about the package scripts",
@@ -48,6 +48,7 @@
     "node": ">=8.9"
   },
   "dependencies": {
+    "ajv": "^6.9.1",
     "axios": "^0.18.0",
     "ethereumjs-util": "^6.0.0",
     "goog": "^0.2.1",

@@ -86,7 +86,6 @@ export class Client extends RestClient {
    */
   async getTemplatesByIssuer(issuer: string): Promise<ReadonlyArray<Template>> {
     const stateAddress = new AddressBuilder(TEMPLATES_PREFIX).append(issuer, 0, 30).build();
-    console.log(stateAddress)
 
     try {
       const results = await this.stateQuery(stateAddress);
