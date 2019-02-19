@@ -13,6 +13,9 @@ const validateTemplate = function (args) {
     const templateToCreate = Reader.readJSON(template_json_path);
     const {valid, errors} = Validator.isValidJSON(Validator.schemas.templates, templateToCreate);
     if(valid) {
+      if(!templateToCreate["coreData"]) {
+        templateToCreate["coreData"] = {};
+      }
       cache.put('templateToCreate', templateToCreate);
       return true;
     } else {

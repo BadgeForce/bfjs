@@ -4,7 +4,9 @@ import { RPCRequest, Create, Delete } from '../generated/credential-templates/pa
 import { TransactionHeader } from '../sawtooth-sdk-ts/transaction_pb';
 import { createHash } from 'crypto';
 import { TransactionData, Client } from '../client';
-import { Secp256k1Signer, computePOIHash } from '../common';
+import {Secp256k1Signer, computePOIHash, extractValueType} from '../common';
+import {Struct, Value} from "google-protobuf/google/protobuf/struct_pb";
+const moment = require('moment');
 
 export class CredentialTemplateVersion {
   private version: Version = new Version();
@@ -23,7 +25,7 @@ export class CredentialTemplate {
   private address: string = "";
   private credTemplate: Template = new Template();
 
-  constructor(public issuer: Secp256k1Signer, public name: string, public description: string, public type: string, public version: CredentialTemplateVersion) {
+  constructor(public issuer: Secp256k1Signer, public name: string, public description: string, public type: string, public version: CredentialTemplateVersion, public coreData ?: any) {
     const issuerPub = issuer.publickeyAsHex;
 
     this.address = getTemplateAddress(issuerPub, name, version.getVersion());
@@ -35,6 +37,7 @@ export class CredentialTemplate {
     data.setDescription(description);
     data.setName(name);
     data.setIssuerPub(issuerPub);
+    data.setCoreData(Struct.fromJavaScript(coreData));
 
     const poiHash = computePOIHash(data);
     const sig = issuer.sign(new Uint8Array(Buffer.from(poiHash, 'hex')));
@@ -50,11 +53,55 @@ export class CredentialTemplate {
 
   get template(): Template { return this.credTemplate }
 
+  static toJSON(credTemplate: Template): any {
+    const data: Data = credTemplate.getData();
+    const json: any = {
+      "state-address": getTemplateAddress(credTemplate.getData().getIssuerPub(), data.getName(), credTemplate.getData().getVersion()),
+      "name": data.getName(),
+      "issuer-publickey": data.getIssuerPub(),
+      "description": data.getDescription(),
+      "type": data.getType(),
+      "created-at": moment(new Date(data.getCreatedAt())).format('L'),
+      'version': `${data.getVersion().getMajor()}.${data.getVersion().getMinor()}.${data.getVersion().getPatch()}`,
+    };
+
+    data.getCoreData().getFieldsMap().forEach((entry: Value, key: string) => {
+      json[key] = extractValueType(entry);
+    });
+
+    return json;
+  };
 }
 
+
+/**
+ * Handles Credential Template Transactions
+ *
+ * @export
+ * @class TemplatesTransactor
+ *
+ */
 export class TemplatesTransactor {
   constructor(public singerPublicKey: string, public transactionStore: (t: TransactionData) => Client) { }
 
+  /**
+   * Creates a transaction to create a new Credential Template, transaction can be submitted with next batch.
+   * @memberof Client
+   * @param credentialTemplate template to create
+   * ### Example (commonjs)
+   * ```js
+   * const { badgeforcejs } = require('bfjs');
+   *
+   * const client = new badgeforcejs.Client('http://127.0.0.1:8008',
+   *  "e3ddee618d8a8864481e71021e42ed46c3ab410ab1ad7cdf0ff31f6d61739275");
+   *
+   * const templateVersion = new badgeforcejs.Templates.CredentialTemplateVersion(1, 0, 0);
+   * const template = new badgeforcejs.Templates.CredentialTemplate(client.signer, name, description, type, templateVersion);
+   *
+   * client.templates.create(template).submitNextBatch().then(console.log).catch(console.log);
+   * // =>
+   * ```
+   */
   create(credentialTemplate: CredentialTemplate): Client {
     const create: Create = new Create();
     create.setParams(credentialTemplate.template);

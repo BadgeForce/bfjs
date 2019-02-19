@@ -2,5 +2,13 @@
   "name": "Khalil Template",
   "description": "Just a test lil fella",
   "type": "test",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "coreData": {
+    "programming": "rules",
+    "everyone" : {
+      "loves": "cookies",
+      "hates": "broccoli"
+    },
+    "hello": ["world", "universe", 123]
+  }
 }

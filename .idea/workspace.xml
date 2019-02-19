@@ -2,34 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baf97bbd-cc3f-4a9b-8056-8b1a967d2885" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/cli/commands/errors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cli/commands/templates.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cli/commands/validation/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cli/commands/validation/json_files.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cli/commands/validation/validation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cli/test_files/template_create.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/file_reader/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/file_reader/reader.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/file_reader/templates_schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cli/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/cli/cli.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cli/commands/cache.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cli/commands/current_config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cli/commands/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/cli/commands/init.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cli/commands/init_command.js" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/common/proto_utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bfjs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bfjs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cli/commands/state-query.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/cli/commands/state-query.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cli/commands/templates.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/cli/commands/templates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cli/commands/validation/json_files.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/cli/commands/validation/json_files.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/cli/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/cli/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cli/init_command.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cli/state-query.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cli/templates_commands.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/lib/client/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/client/client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/common/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/common/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/credential_templates/templates.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/credential_templates/templates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/file_reader/templates_schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/file_reader/templates_schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/generated/credential-templates/template_pb.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/generated/credential-templates/template_pb.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cli/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/cli/cli.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cli/commands/current_config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cli/commands/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/cli/commands/init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protos/credential_templates/template.proto" beforeDir="false" afterPath="$PROJECT_DIR$/protos/credential_templates/template.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cli/commands/state-query.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/cli/commands/state-query.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cli/commands/templates.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/cli/commands/templates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cli/commands/validation/json_files.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/cli/commands/validation/json_files.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cli/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/cli/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cli/state-query.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/cli/commands/state-query.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cli/templates_commands.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cli/test_files/template_create.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/cli/test_files/template_create.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/client/client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/client/client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/common/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/common/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/credential_templates/templates.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/credential_templates/templates.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/file_reader/templates_schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/file_reader/templates_schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/generated/credential-templates/template_pb.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/generated/credential-templates/template_pb.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/generated/credential-templates/template_pb.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/generated/credential-templates/template_pb.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,46 +40,19 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cli/commands/validation/index.js">
+        <entry file="file://$PROJECT_DIR$/protos/credential_templates/template.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cli/commands/init.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="67" column="45" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cli/commands/state-query.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="23" column="87" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="87" />
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/cli/commands/templates.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="41" column="34" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lib/credential_templates/templates.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="124">
+              <caret line="58" column="95" selection-start-line="58" selection-start-column="95" selection-end-line="58" selection-end-column="95" />
               <folding>
                 <element signature="e#0#78#0" expanded="true" />
               </folding>
@@ -89,37 +61,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+        <entry file="file://$PROJECT_DIR$/src/cli/commands/state-query.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+            <state relative-caret-position="221">
+              <caret line="27" column="71" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cli/test_files/template_create.json">
+        <entry file="file://$PROJECT_DIR$/src/cli/commands/templates.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cli/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cli/cli.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="60" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
+            <state relative-caret-position="217">
+              <caret line="25" column="90" selection-start-line="25" selection-start-column="90" selection-end-line="25" selection-end-column="90" />
             </state>
           </provider>
         </entry>
@@ -129,6 +83,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>validator</find>
+      <find>Data</find>
+      <find>getCore</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,28 +94,32 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/cli/commands/current_config.js" />
-        <option value="$PROJECT_DIR$/src/lib/client/client.ts" />
         <option value="$PROJECT_DIR$/src/cli/commands/validation.js" />
         <option value="$PROJECT_DIR$/src/cli/commands/errors.js" />
         <option value="$PROJECT_DIR$/src/cli/commands/reader/reader.js" />
         <option value="$PROJECT_DIR$/src/lib/file_reader/templates.ts" />
         <option value="$PROJECT_DIR$/src/lib/file_reader/templates_schema.json" />
-        <option value="$PROJECT_DIR$/src/lib/file_reader/index.ts" />
         <option value="$PROJECT_DIR$/src/index.ts" />
         <option value="$PROJECT_DIR$/src/cli/commands/validation/template.js" />
         <option value="$PROJECT_DIR$/src/lib/file_reader/reader.ts" />
         <option value="$PROJECT_DIR$/src/cli/commands/validation/validation.js" />
-        <option value="$PROJECT_DIR$/src/cli/commands/validation/json_files.js" />
         <option value="$PROJECT_DIR$/src/cli/commands/validation/index.js" />
         <option value="$PROJECT_DIR$/src/cli/commands/init.js" />
-        <option value="$PROJECT_DIR$/src/cli/test_files/template_create.json" />
-        <option value="$PROJECT_DIR$/src/lib/file_reader/templates_schema.ts" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/cli/commands/state-query.js" />
-        <option value="$PROJECT_DIR$/src/cli/index.js" />
         <option value="$PROJECT_DIR$/src/cli/cli.js" />
-        <option value="$PROJECT_DIR$/src/lib/credential_templates/templates.ts" />
+        <option value="$PROJECT_DIR$/src/cli/index.js" />
+        <option value="$PROJECT_DIR$/src/lib/client/client.ts" />
+        <option value="$PROJECT_DIR$/src/lib/file_reader/templates_schema.ts" />
+        <option value="$PROJECT_DIR$/src/cli/commands/validation/json_files.js" />
+        <option value="$PROJECT_DIR$/src/lib/file_reader/template_schema.json" />
+        <option value="$PROJECT_DIR$/src/lib/file_reader/index.ts" />
+        <option value="$PROJECT_DIR$/src/cli/test_files/template_create.json" />
+        <option value="$PROJECT_DIR$/protos/credential_templates/template.proto" />
+        <option value="$PROJECT_DIR$/src/lib/common/index.ts" />
+        <option value="$PROJECT_DIR$/src/lib/common/proto_utils.ts" />
+        <option value="$PROJECT_DIR$/src/cli/commands/state-query.js" />
         <option value="$PROJECT_DIR$/src/cli/commands/templates.js" />
+        <option value="$PROJECT_DIR$/src/lib/credential_templates/templates.ts" />
       </list>
     </option>
   </component>
@@ -167,7 +127,7 @@
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
@@ -181,6 +141,11 @@
             <path>
               <item name="bfjs" type="b2602c69:ProjectViewProjectNode" />
               <item name="bfjs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bfjs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bfjs" type="462c0819:PsiDirectoryNode" />
+              <item name="protos" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bfjs" type="b2602c69:ProjectViewProjectNode" />
@@ -204,21 +169,14 @@
               <item name="bfjs" type="b2602c69:ProjectViewProjectNode" />
               <item name="bfjs" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="cli" type="462c0819:PsiDirectoryNode" />
+              <item name="test_files" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bfjs" type="b2602c69:ProjectViewProjectNode" />
               <item name="bfjs" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="credential_templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bfjs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bfjs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="file_reader" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -231,7 +189,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550489900829" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550555064277" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -268,36 +226,37 @@
       <option name="presentableId" value="Default" />
       <updated>1550477654804</updated>
       <workItem from="1550477656365" duration="60000" />
-      <workItem from="1550477743947" duration="11338000" />
+      <workItem from="1550477743947" duration="22637000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11398000" />
+    <option name="totallyTimeSpent" value="22697000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TypeScript" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.4939759" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="TypeScript" order="0" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Find" order="3" />
+      <window_info anchor="bottom" id="Run" order="4" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.4253012" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -320,26 +279,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/client/rest.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="178" column="2" lean-forward="true" selection-start-line="178" selection-start-column="2" selection-end-line="178" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/client/client.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="89" column="9" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cli/commands/errors.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -353,17 +292,7 @@
     <entry file="file://$PROJECT_DIR$/src/cli/commands/reader/reader.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/file_reader/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" selection-start-column="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cli/commands/validation/template.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/credential_templates/index.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.ts">
@@ -376,45 +305,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cli/commands/validation/validation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cli/commands/validation/json_files.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/cli/commands/init.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-80">
           <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cli/test_files/template_create.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/file_reader/reader.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/file_reader/templates_schema.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="58" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -423,44 +317,6 @@
         <state>
           <folding>
             <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cli/commands/state-query.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="23" column="87" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cli/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cli/cli.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="60" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/credential_templates/templates.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
-          <folding>
-            <element signature="e#0#78#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -479,10 +335,244 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/signer/signer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-155">
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/client/config.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/client/index.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/client/rest.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2670">
+          <caret line="178" column="2" lean-forward="true" selection-start-line="178" selection-start-column="2" selection-end-line="178" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/client/serializer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-438">
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/common/address_utils.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/common/signer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-980" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/credential_templates/namespace.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/verifiable_credentials/namespace.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/verifiable_credentials/index.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/verifiable_credentials/credentials.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <folding>
+            <element signature="e#0#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/verifier/index.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/verifier/verifier.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cli/cli.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="60" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/credential_templates/index.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cli/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/generated/credential-templates/template_pb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="408" column="8" lean-forward="true" selection-start-line="408" selection-start-column="8" selection-end-line="408" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/generated/credential-templates/template_pb.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#Template#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cli/commands/validation/validation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/client/client.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/file_reader/template_schema.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/file_reader/template_json.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/common/proto_utils.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cli/test_files/template_create.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/common/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/file_reader/templates_schema.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/file_reader/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cli/commands/validation/json_files.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/file_reader/reader.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protos/credential_templates/template.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cli/commands/state-query.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="27" column="71" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cli/commands/templates.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="41" column="34" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="34" />
+        <state relative-caret-position="217">
+          <caret line="25" column="90" selection-start-line="25" selection-start-column="90" selection-end-line="25" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/credential_templates/templates.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="58" column="95" selection-start-line="58" selection-start-column="95" selection-end-line="58" selection-end-column="95" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

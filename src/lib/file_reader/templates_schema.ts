@@ -16,6 +16,10 @@ export const templateSchema = {
       "description": "Type of the Credential Template, (i.e: medical, education etc)",
       "type": "string"
     },
+    "coreData": {
+      "description": "Optional key value map of extra data that describe this credential template",
+      "type": "object"
+    },
     "version": {
       "description": "Version of the Credential Template",
       "type": "string",

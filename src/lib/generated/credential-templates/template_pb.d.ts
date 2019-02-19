@@ -2,6 +2,7 @@
 // file: template.proto
 
 import * as jspb from "google-protobuf";
+import * as google_protobuf_struct_pb from "google-protobuf/google/protobuf/struct_pb";
 
 export class Template extends jspb.Message {
   hasData(): boolean;
@@ -52,6 +53,11 @@ export class Data extends jspb.Message {
   getVersion(): Version | undefined;
   setVersion(value?: Version): void;
 
+  hasCoreData(): boolean;
+  clearCoreData(): void;
+  getCoreData(): google_protobuf_struct_pb.Struct | undefined;
+  setCoreData(value?: google_protobuf_struct_pb.Struct): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Data.AsObject;
   static toObject(includeInstance: boolean, msg: Data): Data.AsObject;
@@ -70,6 +76,7 @@ export namespace Data {
     type: string,
     createdAt: number,
     version?: Version.AsObject,
+    coreData?: google_protobuf_struct_pb.Struct.AsObject,
   }
 }
 

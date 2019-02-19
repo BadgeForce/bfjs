@@ -12,6 +12,7 @@ import { Template } from '../generated/credential-templates/template_pb';
  * @export
  * @class Client
  * @extends {RestClient}
+ *
  */
 export class Client extends RestClient {
 

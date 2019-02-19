@@ -53,6 +53,7 @@
     "ethereumjs-util": "^6.0.0",
     "goog": "^0.2.1",
     "google-protobuf": "^3.6.1",
+    "json-schema-to-typescript": "^6.1.1",
     "lodash": "^4.17.11",
     "memory-cache": "^0.2.0",
     "moment": "^2.22.2",

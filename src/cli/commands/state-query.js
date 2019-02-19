@@ -25,9 +25,7 @@ const queryTemplates = async function(args, callback) {
       const verificationRes = `Verification Result: ${result.ok ? chalk.green("valid"): `invalid: ${chalk.red(result.error)}`}`;
 
       const output = {
-        'state-address': address,
-        'template': t.toObject(),
-        'created-at': moment(new Date(t.getData().getCreatedAt() * 1000)).format('L'),
+        'template': badgeforcejs.Templates.CredentialTemplate.toJSON(t),
         'verification': verificationRes
       };
 
